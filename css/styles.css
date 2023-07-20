@@ -1,0 +1,74 @@
+body {
+    display: flex;     
+    margin: auto;  
+    max-height: 100vh;
+    font-family: sans-serif;   
+}
+
+/* HEADER */
+
+header {
+    background-image: url(../images/nicole.jpg);
+    background-size: contain;
+    background-repeat: no-repeat; 
+    display: flex;  
+    flex-direction: column; 
+    justify-content: space-between;       
+}
+
+.header__article {
+    background-color: #f9f9f942;
+    display: block;    
+}
+
+.header__description {
+    text-align: end;
+}
+
+.header p {
+    color: #fff;
+    font-size: 1.4rem;
+    text-align: end;
+}
+
+.header__title {
+    color: #fff;
+    font-weight: 800;
+    text-align: end;
+}
+
+.header__subtitle {
+    font-style: italic;
+    font-weight: 200;
+    font-size: 1.4rem;
+}
+
+
+/* MAIN */
+
+.main {   
+    width: 180vh;
+}
+
+.main__title {
+    background-color: #f1f1f1;
+    font-size: 30px;
+    font-weight: 700;
+    margin: 5px 10px;
+    padding-top: 20px;
+    padding-left: 10px; 
+    padding-bottom: 10px;   
+}
+
+
+.section__article {
+    border: 1px solid #eaeaea;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width: 20%;
+}
+
+.logo {
+    width: 5%
+}
