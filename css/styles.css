@@ -1,74 +1,189 @@
+:root {
+    --white: white;
+    --article-link: #007bff;
+    --article-link-hover: #0056b3;
+    --header-article-box: #f9f9f950;
+    --article-border: #eaeaea;
+    --tag-work: #0766F0;
+    --tag-team: #DC5E53;
+    --tag-news: #98DC62;
+}
+
 body {
-    display: flex;     
-    margin: auto;  
-    max-height: 100vh;
-    font-family: sans-serif;   
+    font-family: sans-serif;
+    height: 100vh;
+    display: flex;
 }
 
-/* HEADER */
-
-header {
+.header {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 40px 20px 15px 20px;
     background-image: url(../images/nicole.jpg);
-    background-size: contain;
-    background-repeat: no-repeat; 
-    display: flex;  
-    flex-direction: column; 
-    justify-content: space-between;       
-}
-
-.header__article {
-    background-color: #f9f9f942;
-    display: block;    
-}
-
-.header__description {
-    text-align: end;
-}
-
-.header p {
-    color: #fff;
-    font-size: 1.4rem;
-    text-align: end;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    width: 50%;
 }
 
 .header__title {
-    color: #fff;
-    font-weight: 800;
-    text-align: end;
+    display: flex;
+    gap: 10px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1.3rem;
+    line-height: 1.2;
 }
 
-.header__subtitle {
-    font-style: italic;
-    font-weight: 200;
+.header__title-image {
+    height: 40px;
+}
+
+.header__title-text {
+    width: 1px;
+}
+
+.header__article {
+    background-color: var(--header-article-box);
+    padding: 20px 10px 20px 150px;
+    text-align: right;
+    text-shadow: 0 0 4px black;
+}
+
+
+.header__article-title {
     font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.header__article-subtitle {
+    font-size: 0.9rem;
+    font-weight: 200;
+    font-style: italic;
+}
+
+.header__article-content {
+    line-height: 1.2;
+    font-size: 0.9rem;
+    font-weight: 200;
+}
+
+.header__menu {
+    display: flex;
+    width: 100%;
+    justify-content:flex-end;
+    gap: 26px;
+}
+
+.header__menu-item {
+    color: white;
+    text-decoration: none;
+    text-shadow: 0 0 4px black;
+    transition-duration: 100ms;
+}
+
+.header__menu-item:hover {
+    color: rgb(228, 228, 228);
+    text-decoration: underline;
 }
 
 
-/* MAIN */
-
-.main {   
-    width: 180vh;
+.main {
+    display: flex;
+    flex-direction: column;
+    overflow: hidden scroll;
+    width: 50%;;
 }
 
 .main__title {
-    background-color: #f1f1f1;
-    font-size: 30px;
-    font-weight: 700;
-    margin: 5px 10px;
-    padding-top: 20px;
-    padding-left: 10px; 
-    padding-bottom: 10px;   
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 25px;
+    margin-bottom: 0;
+    background-color: #f9f9f9;
 }
 
-
-.section__article {
-    border: 1px solid #eaeaea;
+.main__articles-container {
     display: flex;
     flex-wrap: wrap;
-    flex-direction: column;
-    width: 20%;
 }
 
-.logo {
-    width: 5%
+.main__article {
+    box-sizing: border-box;
+    width: 50%;
+    border: 1px solid var(--article-border);
+    padding: 25px;
+}
+
+.main__article-tags {
+    margin-bottom: 20px;
+}
+
+.main__article-tag {
+    padding: 7px;
+    color: white;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 0.7rem;
+}
+
+.main__article-tag--work {
+    background-color: var(--tag-work);
+}
+
+.main__article-tag--team {
+    background-color: var(--tag-team);
+}
+
+.main__article-tag--news {
+    background-color: var(--tag-news);
+}
+
+.main__article-title {
+    font-weight: bold;
+    font-size: 1.2rem;
+    margin: 15px 0;
+    line-height: 1.4;
+}
+
+.main__article-infos {
+    display: flex;
+    align-items: center;
+    font-size: 0.6rem;
+    margin-bottom: 10px;
+}
+
+.article__author-image {
+    width: 20px;
+    margin-right: 5px;
+}
+
+.article__author-name {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.article__date {
+    font-weight: 200;
+    color: darkgray;
+}
+
+.main__article-content {
+    line-height: 1.2;
+    margin-bottom: 10px;
+}
+
+.main__article-link {
+    color: var(--article-link);
+    font-weight: bold;
+    text-decoration: none;
+    transition-duration: 100ms;
+}
+
+.main__article-link:hover {
+    color: var(--article-link-hover);
+    text-decoration: underline;
 }
